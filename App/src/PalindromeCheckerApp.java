@@ -1,16 +1,25 @@
 public class PalindromeCheckerApp {
     public static void main(String[] args) {
-        String s = "level";
-        String rev = "";
+        String s = "radar";
+        char[] ch = s.toCharArray();
 
-        for(int i = s.length() - 1; i >= 0; i--) {
-            rev = rev + s.charAt(i);
+        int start = 0;
+        int end = ch.length - 1;
+        boolean flag = true;
+
+        while(start < end) {
+            if(ch[start] != ch[end]) {
+                flag = false;
+                break;
+            }
+            start++;
+            end--;
         }
 
         System.out.println("Palindrome Checker App");
-        System.out.println("UC3: Palindrome Check Using String Reverse");
+        System.out.println("UC4: Character Array Based Palindrome Check");
 
-        if(s.equals(rev)) {
+        if(flag) {
             System.out.println(s + " is a Palindrome");
         } else {
             System.out.println(s + " is not a Palindrome");
