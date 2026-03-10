@@ -1,8 +1,19 @@
 public class PalindromeCheckerApp {
     public static void main(String[] args) {
-        System.out.println("Palindrome Checker App");
-        System.out.println("UC1: Application Entry & Welcome Message");
-        System.out.println("Version: 1.0");
-        System.out.println("Welcome to the Palindrome Checker Application");
+            String s = "madam";
+            String rev = "";
+
+            for(int i = s.length() - 1; i >= 0; i--) {
+                rev = rev + s.charAt(i);
+            }
+
+            System.out.println("Palindrome Checker App");
+            System.out.println("UC2: Print a Hardcoded Palindrome Result");
+
+            if(s.equals(rev)) {
+                System.out.println(s + " is a Palindrome");
+            } else {
+                System.out.println(s + " is not a Palindrome");
+            }
+        }
     }
-}
